@@ -1,4 +1,4 @@
-```css
+
 * {
     margin: 0;
     padding: 0;
@@ -38,13 +38,15 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .logo img {
-    height: 200px;
-    width: auto;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
     display: block;
-    object-fit: contain;
 }
 
 nav a {
