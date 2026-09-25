@@ -12,10 +12,7 @@
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
-
+    <!-- ================= HEADER ================= -->
     <header id="header">
 
         <div class="logo">
@@ -23,8 +20,7 @@
         </div>
 
         <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
+            <a href="#home">Home</a>
             <a href="#about">Who We Are</a>
             <a href="#services">What We Do</a>
             <a href="#vision">2030 Vision</a>
@@ -34,51 +30,45 @@
     </header>
 
 
-    <!-- =========================
-         HERO SLIDESHOW
-    ========================== -->
+    <!-- ================= HOME / HERO ================= -->
+    <section id="home" class="hero">
 
-    <section class="hero">
-
-        <!-- Moving background images -->
+        <!-- Moving Background Slides -->
         <div class="hero-slide slide-one"></div>
         <div class="hero-slide slide-two"></div>
         <div class="hero-slide slide-three"></div>
+        <div class="hero-slide slide-four"></div>
 
+        <!-- Dark Overlay -->
         <div class="hero-overlay"></div>
 
+        <!-- Hero Content -->
         <div class="hero-content">
 
             <div class="hero-logo">
                 <img src="logo.png" alt="MABICIMA Logo">
             </div>
 
-            <p class="hero-small">ESTABLISHED 2020</p>
+            <p class="established">ESTABLISHED 2020</p>
 
             <h1>MABICIMA</h1>
 
-            <h2>
-                MAGGOT POULTRY FEED & CHICKEN FARMING
-            </h2>
+            <h2>MAGGOT POULTRY FEED & CHICKEN FARMING</h2>
 
-            <p class="hero-description">
-                We mix our own feed for free range chickens,
-                grow chickens, slaughter, train and grow the market
-                from Butswana to Maruleng.
+            <p>
+                We mix our own feed for free range chickens, grow chickens,
+                slaughter, train and grow the market from Butswana to Maruleng.
             </p>
 
             <div class="hero-buttons">
 
-                <a href="#services" class="button">
+                <a href="#services" class="btn primary-btn">
                     Explore Our Services
                 </a>
 
-                <a
-                    href="https://wa.me/27608155928"
-                    class="whatsapp-button"
-                    target="_blank"
-                    rel="noopener"
-                >
+                <a href="https://wa.me/27608155928"
+                   target="_blank"
+                   class="btn whatsapp-btn">
                     WhatsApp Us
                 </a>
 
@@ -86,154 +76,71 @@
 
         </div>
 
-        <!-- Slideshow indicators -->
-        <div class="slide-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
 
-        <div class="scroll-down">
-            <span>Scroll Down</span>
-            <div class="arrow">↓</div>
-        </div>
+        <!-- Slideshow Indicators -->
+        <div class="slider-dots">
 
-    </section>
-
-
-    <!-- =========================
-         ABOUT
-    ========================== -->
-
-    <section id="about" class="reveal-section">
-
-        <div class="section-title">
-
-            <p class="section-label">ABOUT MABICIMA</p>
-
-            <h2>Who We Are</h2>
-
-            <div class="title-line"></div>
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
 
         </div>
 
-        <div class="about">
 
-            <p>
-                I am Gracious from Butswana Village.
-                MABICIMA started in 2020 with one hen.
-            </p>
-
-            <p>
-                We are not just resellers. We mix our own
-                maggot feed for free range chickens using
-                our village formula of maggot protein,
-                maize and moringa.
-            </p>
-
-            <p>
-                We mix feed, grow chickens, slaughter and train.
-                We grow the market from Butswana to Maruleng.
-            </p>
-
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span></span>
+            <p>Scroll Down</p>
         </div>
 
     </section>
 
 
-    <!-- =========================
-         SERVICES
-    ========================== -->
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section reveal-section">
 
-    <section id="services" class="services-section reveal-section">
+        <div class="container">
 
-        <div class="section-title">
+            <p class="section-label">WHO WE ARE</p>
 
-            <p class="section-label">OUR SERVICES</p>
+            <h2>About MABICIMA</h2>
 
-            <h2>What We Do</h2>
+            <div class="about-content">
 
-            <div class="title-line"></div>
+                <div class="about-text">
 
-            <p>
-                From feed production to poultry farming and training.
-            </p>
+                    <p>
+                        MABICIMA was started by Gracious from Butswana Village
+                        in Maruleng. The journey began in 2020 with one hen and
+                        a vision to build a sustainable poultry business.
+                    </p>
 
-        </div>
+                    <p>
+                        Today, MABICIMA develops its own poultry feed formula
+                        using maggot protein, maize and moringa.
+                    </p>
 
+                    <p>
+                        We mix our own feed, grow chickens, slaughter chickens
+                        and provide breeding training while working to grow the
+                        poultry market from Butswana to Maruleng.
+                    </p>
 
-        <div class="services">
+                </div>
 
-            <div class="service reveal-card">
+                <div class="about-highlight">
 
-                <div class="service-number">01</div>
+                    <div class="highlight-number">2020</div>
 
-                <h3>We Mix Feed</h3>
+                    <h3>Where It Started</h3>
 
-                <p>
-                    We formulate and mix affordable,
-                    protein-rich feed for free range,
-                    Boschveld, broilers and layers.
-                </p>
+                    <p>
+                        From one hen to a growing vision for rural poultry
+                        farming.
+                    </p>
 
-                <p>
-                    Starter, grower and layer mixes are available.
-                </p>
-
-            </div>
-
-
-            <div class="service reveal-card">
-
-                <div class="service-number">02</div>
-
-                <h3>Live Chickens</h3>
-
-                <p>
-                    We grow and sell Free Range,
-                    Boschveld, Broilers and Egg Layers.
-                </p>
-
-                <p>
-                    From day-old chickens to point-of-lay.
-                </p>
-
-            </div>
-
-
-            <div class="service reveal-card">
-
-                <div class="service-number">03</div>
-
-                <h3>Slaughtered Chickens</h3>
-
-                <p>
-                    Fresh slaughtered chickens are available
-                    every Friday and Saturday.
-                </p>
-
-                <p>
-                    Whole or pieces, cleaned and packed.
-                    Bulk orders are available.
-                </p>
-
-            </div>
-
-
-            <div class="service reveal-card">
-
-                <div class="service-number">04</div>
-
-                <h3>Breeding Training</h3>
-
-                <p>
-                    Learn how we mix feed, breed chickens,
-                    slaughter and sell poultry products.
-                </p>
-
-                <p>
-                    Training includes a certificate.
-                </p>
+                </div>
 
             </div>
 
@@ -242,32 +149,98 @@
     </section>
 
 
-    <!-- =========================
-         VISION
-    ========================== -->
+    <!-- ================= SERVICES ================= -->
+    <section id="services" class="section services-section reveal-section">
 
-    <section id="vision" class="vision reveal-section">
+        <div class="container">
 
-        <div class="vision-content">
+            <p class="section-label">WHAT WE DO</p>
 
-            <div class="section-title">
+            <h2>Our Services</h2>
 
-                <p class="section-label">LOOKING AHEAD</p>
+            <div class="services-grid">
 
-                <h2>Our 2030 Vision</h2>
+                <div class="service-card reveal-card">
 
-                <div class="title-line"></div>
+                    <div class="service-icon">01</div>
+
+                    <h3>We Mix Feed</h3>
+
+                    <p>
+                        We produce our own poultry feed using maggot protein,
+                        maize and moringa.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card reveal-card">
+
+                    <div class="service-icon">02</div>
+
+                    <h3>Live Chickens</h3>
+
+                    <p>
+                        We grow healthy free range chickens for the local
+                        market.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card reveal-card">
+
+                    <div class="service-icon">03</div>
+
+                    <h3>Slaughtered Chickens</h3>
+
+                    <p>
+                        We provide freshly slaughtered chickens to customers
+                        and the local market.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card reveal-card">
+
+                    <div class="service-icon">04</div>
+
+                    <h3>Breeding Training</h3>
+
+                    <p>
+                        We share knowledge and training to help people
+                        participate in poultry farming.
+                    </p>
+
+                </div>
 
             </div>
 
-            <p>
-                Establish 1,000 rural women in the poultry value chain:
-                mix feed, grow chickens, sell live and slaughtered chickens,
-                and train others.
+        </div>
+
+    </section>
+
+
+    <!-- ================= VISION ================= -->
+    <section id="vision" class="vision-section reveal-section">
+
+        <div class="container">
+
+            <p class="section-label">OUR 2030 VISION</p>
+
+            <h2>Building Opportunities Through Poultry</h2>
+
+            <div class="vision-number">1,000</div>
+
+            <p class="vision-text">
+                Our vision is to establish 1,000 rural women in the poultry
+                value chain by 2030.
             </p>
 
-            <p>
-                Growing the market together from our communities.
+            <p class="vision-description">
+                MABICIMA aims to create opportunities in poultry production,
+                feed production, breeding, training and market development.
             </p>
 
         </div>
@@ -275,94 +248,93 @@
     </section>
 
 
-    <!-- =========================
-         CONTACT
-    ========================== -->
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section contact-section reveal-section">
 
-    <section id="contact" class="contact reveal-section">
-
-        <div class="section-title">
+        <div class="container">
 
             <p class="section-label">GET IN TOUCH</p>
 
             <h2>Contact MABICIMA</h2>
 
-            <div class="title-line"></div>
+            <div class="contact-grid">
 
-            <p>
-                For feed, chickens, bulk orders, agents and training.
-            </p>
+                <div class="contact-card reveal-card">
 
-        </div>
+                    <h3>Business Contact</h3>
+
+                    <p>
+                        <strong>Phone:</strong><br>
+                        065 666 2942
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong><br>
+                        mabicimamaggotfeedfarming@gmail.com
+                    </p>
+
+                    <p>
+                        <strong>Location:</strong><br>
+                        Butswana Village, Maruleng
+                    </p>
+
+                </div>
 
 
-        <div class="contact-details">
+                <div class="contact-card reveal-card">
 
-            <div class="contact-item">
-                <strong>Phone</strong>
-                <span>065 666 2942</span>
+                    <h3>Marketing Executive Director</h3>
+
+                    <p>
+                        <strong>Mr David Mokganya</strong>
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong><br>
+                        082 478 9971
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong><br>
+                        Davidmabicima@gmail.com
+                    </p>
+
+                    <a href="https://wa.me/27608155928"
+                       target="_blank"
+                       class="contact-whatsapp">
+                        Chat on WhatsApp
+                    </a>
+
+                </div>
+
             </div>
 
-            <div class="contact-item">
-                <strong>Email</strong>
-                <span>mabicimamaggotfeedfarming@gmail.com</span>
-            </div>
-
-            <div class="contact-item">
-                <strong>Location</strong>
-                <span>Butswana Village, Maruleng</span>
-            </div>
-
         </div>
-
-
-        <div class="director">
-
-            <h3>Marketing Executive Director</h3>
-
-            <p><strong>Mr David Mokganya</strong></p>
-
-            <p>082 478 9971</p>
-
-            <p>Davidmabicima@gmail.com</p>
-
-        </div>
-
-
-        <a
-            href="https://wa.me/27608155928"
-            class="whatsapp-button contact-button"
-            target="_blank"
-            rel="noopener"
-        >
-            Chat with MABICIMA on WhatsApp
-        </a>
 
     </section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
+    <!-- ================= FOOTER ================= -->
     <footer>
 
-        <div class="footer-logo">
-            <img src="logo.png" alt="MABICIMA Logo">
+        <div class="container">
+
+            <div class="footer-logo">
+                <img src="logo.png" alt="MABICIMA Logo">
+            </div>
+
+            <h3>MABICIMA</h3>
+
+            <p>
+                We Mix Feed For Free Range, Growing The Market.
+            </p>
+
+            <p class="copyright">
+                © <span id="current-year"></span> MABICIMA.
+                All Rights Reserved.
+            </p>
+
         </div>
-
-        <p>
-            MABICIMA — We Mix Feed For Free Range,
-            Growing The Market.
-        </p>
-
-        <p>
-            Established 2020
-        </p>
-
-        <p class="copyright">
-            © <span id="year"></span> MABICIMA. All Rights Reserved.
-        </p>
 
     </footer>
 
@@ -370,4 +342,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
