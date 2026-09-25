@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,11 @@
 
 <body>
 
-    <!-- Navigation -->
-    <header>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header id="header">
 
         <div class="logo">
             <img src="logo.png" alt="MABICIMA Logo">
@@ -30,10 +34,26 @@
     </header>
 
 
-    <!-- Hero Section -->
+    <!-- =========================
+         HERO SLIDESHOW
+    ========================== -->
+
     <section class="hero">
 
+        <!-- Moving background images -->
+        <div class="hero-slide slide-one"></div>
+        <div class="hero-slide slide-two"></div>
+        <div class="hero-slide slide-three"></div>
+
+        <div class="hero-overlay"></div>
+
         <div class="hero-content">
+
+            <div class="hero-logo">
+                <img src="logo.png" alt="MABICIMA Logo">
+            </div>
+
+            <p class="hero-small">ESTABLISHED 2020</p>
 
             <h1>MABICIMA</h1>
 
@@ -41,35 +61,59 @@
                 MAGGOT POULTRY FEED & CHICKEN FARMING
             </h2>
 
-            <p>
+            <p class="hero-description">
                 We mix our own feed for free range chickens,
                 grow chickens, slaughter, train and grow the market
                 from Butswana to Maruleng.
             </p>
 
-            <a href="#services" class="button">
-                Explore Our Services
-            </a>
+            <div class="hero-buttons">
 
-            <a
-                href="https://wa.me/27608155928"
-                class="whatsapp-button"
-                target="_blank"
-            >
-                WhatsApp Us
-            </a>
+                <a href="#services" class="button">
+                    Explore Our Services
+                </a>
 
+                <a
+                    href="https://wa.me/27608155928"
+                    class="whatsapp-button"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Slideshow indicators -->
+        <div class="slide-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <div class="scroll-down">
+            <span>Scroll Down</span>
+            <div class="arrow">↓</div>
         </div>
 
     </section>
 
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about" class="reveal-section">
 
         <div class="section-title">
 
+            <p class="section-label">ABOUT MABICIMA</p>
+
             <h2>Who We Are</h2>
+
+            <div class="title-line"></div>
 
         </div>
 
@@ -97,12 +141,19 @@
     </section>
 
 
-    <!-- Services Section -->
-    <section id="services">
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section id="services" class="services-section reveal-section">
 
         <div class="section-title">
 
+            <p class="section-label">OUR SERVICES</p>
+
             <h2>What We Do</h2>
+
+            <div class="title-line"></div>
 
             <p>
                 From feed production to poultry farming and training.
@@ -113,7 +164,9 @@
 
         <div class="services">
 
-            <div class="service">
+            <div class="service reveal-card">
+
+                <div class="service-number">01</div>
 
                 <h3>We Mix Feed</h3>
 
@@ -130,7 +183,9 @@
             </div>
 
 
-            <div class="service">
+            <div class="service reveal-card">
+
+                <div class="service-number">02</div>
 
                 <h3>Live Chickens</h3>
 
@@ -146,7 +201,9 @@
             </div>
 
 
-            <div class="service">
+            <div class="service reveal-card">
+
+                <div class="service-number">03</div>
 
                 <h3>Slaughtered Chickens</h3>
 
@@ -163,7 +220,9 @@
             </div>
 
 
-            <div class="service">
+            <div class="service reveal-card">
+
+                <div class="service-number">04</div>
 
                 <h3>Breeding Training</h3>
 
@@ -183,34 +242,52 @@
     </section>
 
 
-    <!-- Vision Section -->
-    <section id="vision" class="vision">
+    <!-- =========================
+         VISION
+    ========================== -->
 
-        <div class="section-title">
+    <section id="vision" class="vision reveal-section">
 
-            <h2>Our 2030 Vision</h2>
+        <div class="vision-content">
+
+            <div class="section-title">
+
+                <p class="section-label">LOOKING AHEAD</p>
+
+                <h2>Our 2030 Vision</h2>
+
+                <div class="title-line"></div>
+
+            </div>
+
+            <p>
+                Establish 1,000 rural women in the poultry value chain:
+                mix feed, grow chickens, sell live and slaughtered chickens,
+                and train others.
+            </p>
+
+            <p>
+                Growing the market together from our communities.
+            </p>
 
         </div>
-
-        <p>
-            Establish 1,000 rural women in the poultry value chain:
-            mix feed, grow chickens, sell live and slaughtered chickens,
-            and train others.
-        </p>
-
-        <p>
-            Growing the market together from our communities.
-        </p>
 
     </section>
 
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact" class="contact reveal-section">
 
         <div class="section-title">
 
+            <p class="section-label">GET IN TOUCH</p>
+
             <h2>Contact MABICIMA</h2>
+
+            <div class="title-line"></div>
 
             <p>
                 For feed, chickens, bulk orders, agents and training.
@@ -219,48 +296,44 @@
         </div>
 
 
-        <p>
-            <strong>Phone:</strong>
-            065 666 2942
-        </p>
+        <div class="contact-details">
 
-        <p>
-            <strong>Email:</strong>
-            mabicimamaggotfeedfarming@gmail.com
-        </p>
+            <div class="contact-item">
+                <strong>Phone</strong>
+                <span>065 666 2942</span>
+            </div>
 
-        <p>
-            <strong>Location:</strong>
-            Butswana Village, Maruleng
-        </p>
+            <div class="contact-item">
+                <strong>Email</strong>
+                <span>mabicimamaggotfeedfarming@gmail.com</span>
+            </div>
 
+            <div class="contact-item">
+                <strong>Location</strong>
+                <span>Butswana Village, Maruleng</span>
+            </div>
 
-        <br>
-
-
-        <p>
-            <strong>Marketing Executive Director:</strong>
-            Mr David Mokganya
-        </p>
-
-        <p>
-            <strong>Phone:</strong>
-            082 478 9971
-        </p>
-
-        <p>
-            <strong>Email:</strong>
-            Davidmabicima@gmail.com
-        </p>
+        </div>
 
 
-        <br>
+        <div class="director">
+
+            <h3>Marketing Executive Director</h3>
+
+            <p><strong>Mr David Mokganya</strong></p>
+
+            <p>082 478 9971</p>
+
+            <p>Davidmabicima@gmail.com</p>
+
+        </div>
 
 
         <a
             href="https://wa.me/27608155928"
-            class="whatsapp-button"
+            class="whatsapp-button contact-button"
             target="_blank"
+            rel="noopener"
         >
             Chat with MABICIMA on WhatsApp
         </a>
@@ -268,8 +341,15 @@
     </section>
 
 
-    <!-- Footer -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
+
+        <div class="footer-logo">
+            <img src="logo.png" alt="MABICIMA Logo">
+        </div>
 
         <p>
             MABICIMA — We Mix Feed For Free Range,
@@ -278,6 +358,10 @@
 
         <p>
             Established 2020
+        </p>
+
+        <p class="copyright">
+            © <span id="year"></span> MABICIMA. All Rights Reserved.
         </p>
 
     </footer>
