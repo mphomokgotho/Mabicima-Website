@@ -4,21 +4,31 @@
 
 
 /* =========================
-   SLIDESHOW DOTS
+   SLIDESHOW
 ========================= */
 
 const dots = document.querySelectorAll(".dot");
 
 let currentSlide = 0;
 
+
+/*
+   The CSS changes the image every 6 seconds.
+   This JavaScript keeps the dots synchronized.
+*/
+
 function updateDots() {
 
     dots.forEach((dot, index) => {
 
         if (index === currentSlide) {
+
             dot.classList.add("active");
+
         } else {
+
             dot.classList.remove("active");
+
         }
 
     });
@@ -26,14 +36,16 @@ function updateDots() {
 }
 
 
-/* Automatically move to next slide */
+/* Automatically move to the next image */
 
 setInterval(() => {
 
     currentSlide++;
 
     if (currentSlide >= 4) {
+
         currentSlide = 0;
+
     }
 
     updateDots();
@@ -41,7 +53,7 @@ setInterval(() => {
 }, 6000);
 
 
-/* Allow users to click the dots */
+/* Allow visitors to click the dots */
 
 dots.forEach((dot, index) => {
 
@@ -65,6 +77,7 @@ const revealElements = document.querySelectorAll(
 );
 
 const observer = new IntersectionObserver(
+
     (entries, observer) => {
 
         entries.forEach((entry) => {
@@ -80,9 +93,11 @@ const observer = new IntersectionObserver(
         });
 
     },
+
     {
         threshold: 0.15
     }
+
 );
 
 
@@ -149,11 +164,13 @@ navigationLinks.forEach((link) => {
    CURRENT YEAR
 ========================= */
 
-const currentYear = document.getElementById("current-year");
+const currentYear =
+    document.getElementById("current-year");
 
 if (currentYear) {
 
-    currentYear.textContent = new Date().getFullYear();
+    currentYear.textContent =
+        new Date().getFullYear();
 
 }
 
