@@ -4,95 +4,102 @@
 
 
 /* =========================
-   HERO SLIDESHOW DOTS
+   SLIDESHOW DOTS
 ========================= */
 
 const dots = document.querySelectorAll(".dot");
 
 let currentSlide = 0;
 
-function changeDot() {
+function updateDots() {
 
-    dots.forEach(dot => {
-        dot.classList.remove("active");
+    dots.forEach((dot, index) => {
+
+        if (index === currentSlide) {
+            dot.classList.add("active");
+        } else {
+            dot.classList.remove("active");
+        }
+
     });
 
-    if (dots[currentSlide]) {
-        dots[currentSlide].classList.add("active");
-    }
-
-    currentSlide++;
-
-    if (currentSlide >= dots.length) {
-        currentSlide = 0;
-    }
 }
 
 
-/*
-    The CSS slideshow changes every 6 seconds.
-    Keep the dots synchronized with it.
-*/
+/* Automatically move to next slide */
 
-setInterval(changeDot, 6000);
+setInterval(() => {
+
+    currentSlide++;
+
+    if (currentSlide >= 4) {
+        currentSlide = 0;
+    }
+
+    updateDots();
+
+}, 6000);
+
+
+/* Allow users to click the dots */
+
+dots.forEach((dot, index) => {
+
+    dot.addEventListener("click", () => {
+
+        currentSlide = index;
+
+        updateDots();
+
+    });
+
+});
 
 
 /* =========================
    SCROLL REVEAL
 ========================= */
 
-const revealSections =
-    document.querySelectorAll(".reveal-section");
+const revealElements = document.querySelectorAll(
+    ".reveal-section, .reveal-card"
+);
 
-const revealCards =
-    document.querySelectorAll(".reveal-card");
+const observer = new IntersectionObserver(
+    (entries, observer) => {
 
-
-const revealObserver = new IntersectionObserver(
-
-    function(entries) {
-
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
 
             if (entry.isIntersecting) {
 
                 entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
 
             }
 
         });
 
     },
-
     {
         threshold: 0.15
     }
-
 );
 
 
-revealSections.forEach(section => {
+revealElements.forEach((element) => {
 
-    revealObserver.observe(section);
-
-});
-
-
-revealCards.forEach(card => {
-
-    revealObserver.observe(card);
+    observer.observe(element);
 
 });
 
 
 /* =========================
-   NAVIGATION SHADOW
+   HEADER SHADOW ON SCROLL
 ========================= */
 
 const header = document.getElementById("header");
 
-
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", () => {
 
     if (window.scrollY > 50) {
 
@@ -111,19 +118,21 @@ window.addEventListener("scroll", function() {
    SMOOTH NAVIGATION
 ========================= */
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+const navigationLinks = document.querySelectorAll(
+    'nav a[href^="#"]'
+);
 
-    link.addEventListener("click", function(event) {
+navigationLinks.forEach((link) => {
 
-        const targetId =
-            this.getAttribute("href");
+    link.addEventListener("click", function (event) {
 
-        const target =
-            document.querySelector(targetId);
+        event.preventDefault();
+
+        const targetId = this.getAttribute("href");
+
+        const target = document.querySelector(targetId);
 
         if (target) {
-
-            event.preventDefault();
 
             target.scrollIntoView({
                 behavior: "smooth"
@@ -140,24 +149,21 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
    CURRENT YEAR
 ========================= */
 
-const yearElement =
-    document.getElementById("year");
+const currentYear = document.getElementById("current-year");
 
+if (currentYear) {
 
-if (yearElement) {
-
-    yearElement.textContent =
-        new Date().getFullYear();
+    currentYear.textContent = new Date().getFullYear();
 
 }
 
 
 /* =========================
-   PAGE LOAD EFFECT
+   PAGE LOAD
 ========================= */
 
-window.addEventListener("load", function() {
+window.addEventListener("load", () => {
 
-    document.body.classList.add("loaded");
+    document.body.classList.add("page-loaded");
 
 });
